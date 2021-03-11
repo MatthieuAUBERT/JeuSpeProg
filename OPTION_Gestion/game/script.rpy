@@ -6,16 +6,21 @@ $ nombre_territoires = 1;
 label start:
 
 label new_turn:
+    jump diplomatie
 
-label diplomatie:
+label fin_diplomatie:
+    jump developpement
 
-label developpement:
+label fin_developpement:
+    jump conquete
 
-label conquete:
+label fin_conquete:
 
-if (nombre_territoires == nombre_territoires_max || nombre_alliers == nombre_alliers_max):
-    jump end
-else:
-    jump new_turn
+    if (nombre_territoires == nombre_territoires_max || nombre_alliers == nombre_alliers_max):
+        jump end
+    else:
+        jump new_turn
 
 label end:
+
+    "Félicitation, vous avez gagné !"
