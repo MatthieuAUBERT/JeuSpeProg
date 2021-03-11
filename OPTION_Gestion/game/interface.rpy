@@ -50,3 +50,10 @@ screen NombreSoldats:
     text "Soldats prêts au combat : [nbrSoldats!q] / Soldats maximum : [maxSoldats!q]":
         xalign 0
         size 20
+
+screen CarteMondeAtt:
+    imagemap:
+        ground "worldmap.png"
+        hotspot (0,0,0,0) action Jump("Pays1")
+
+        
