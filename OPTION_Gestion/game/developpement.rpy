@@ -1,4 +1,3 @@
-﻿# JeuSpeProg
 
 label d :
     screen village:
@@ -19,3 +18,5 @@ label Mine :
 label BatimentAdmin :
 label TerrainAgri :
 label Puits :
+
+
