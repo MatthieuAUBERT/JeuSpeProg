@@ -1,31 +1,59 @@
 #Envoi de troupes :
+label PréparationAttaque:
+    "Vous allez attaquer ! Préparez vos troupes !"
 
 #Fonction Regroupement : Création d'une armée d'attaque (via un bouton d'ajout et d'enlèvement de "soldats")
+label Regroupement:
+    $ nbrSoldats = 100
+    $ maxSoldats = 550
+    show screen PlusButton
+    show screen MinusButton
+    show screen validation
+    call screen NombreSoldats
 
-"buttonplus" pressé =>
-    Tant que AjoutSoldat != maxSoldats :
-        AjoutSoldat += 1
 
-"buttonminus" pressé =>
-    Tant que AjoutSoldat != 0 :
-        AjoutSoldat -= 1
+label AjoutSoldat:
+    python :
+        if nbrSoldats < maxSoldats :
+            nbrSoldats += 10
+        else :
+            "Vous ne pouvez pas ajouter plus de soldats !"
 
-if AjoutSoldat == 0 || AjoutSoldat == maxSoldats :
-    display : "Vous ne pouvez pas faire ça."
+label DeleteSoldat:
+    python :
+        if nbrSoldats > 0 :
+            nbrSoldats -= 10
+        else :
+            "Vous ne pouvez pas enlever plus de soldats !"
 
-"AjoutSoldat donne alors une certaine puissance"
+
+label PrêtAttaque:
+    $ puissance = nbrSoldats * 10
+    jump TerritoireAtta
+
 #Fonction Choix du territoire à attaquer (via Carte)
+label TerritoireAtta :
+    call screen CarteMondeAtt
 
-display : Carte du monde
-
-"Création des différents territoires"/"Chaque territoire aura un 'bouton' approprié. "
-"PaysAppuyé" => PaysAttaqué
+label Pays1:
+    $ paysAtt = "Pays1"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 900
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
 
 #Fonction d'attaque (comparaison des deux forces et victoire du plus fort)
-if Puissance < Defense :
-    "Afficher un échec de l'attaque"
+label Attaque:
+    if puissance < puissanceDef :
+        "Votre armée a échoué !"
+        "Vous revenez les mains vides, cette défaite vous coûte chère."
+        $ maxSoldats -= nbrSoldats
 
-else :
-    "Afficher une victoire de l'attaque (On donne ici l'avantage à l'attaquant)"
+    else :
+        "Votre armée a réussi !"
+        "Vous revenez plein d'or et souverain d'un nouveau territoire !"
+        $ maxSoldats -= (nbrSoldats/4)
 
 #Si présence d'un allié, attaque commune "FACUL."
