@@ -4,6 +4,14 @@ screen Map :
         idle "icons/map.png"
         action Jump("map")
 
+label map :
+    call screen WorldMap
+
+screen WorldMap :
+    imagebutton :
+        xalign 0
+        idle "worldmap.png"
+        action Jump("hide")
 
 screen Relations :
     imagebutton:
@@ -55,5 +63,3 @@ screen CarteMondeAtt:
     imagemap:
         ground "worldmap.png"
         hotspot (0,0,0,0) action Jump("Pays1")
-
-        
