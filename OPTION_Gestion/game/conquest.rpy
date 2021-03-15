@@ -1,11 +1,11 @@
 #Envoi de troupes :
 label PréparationAttaque:
     "Vous allez attaquer ! Préparez vos troupes !"
+    $ nbrSoldats = 100
+    $ maxSoldats = 550
 
 #Fonction Regroupement : Création d'une armée d'attaque (via un bouton d'ajout et d'enlèvement de "soldats")
 label Regroupement:
-    $ nbrSoldats = 100
-    $ maxSoldats = 550
     show screen PlusButton
     show screen MinusButton
     show screen validation
@@ -19,12 +19,16 @@ label AjoutSoldat:
         else :
             "Vous ne pouvez pas ajouter plus de soldats !"
 
+    jump Regroupement
+
 label DeleteSoldat:
     python :
         if nbrSoldats > 0 :
             nbrSoldats -= 10
         else :
             "Vous ne pouvez pas enlever plus de soldats !"
+
+    jump Regroupement
 
 
 label PrêtAttaque:
@@ -35,11 +39,57 @@ label PrêtAttaque:
 label TerritoireAtta :
     call screen CarteMondeAtt
 
-label Pays1:
-    $ paysAtt = "Pays1"
+label Eternia:
+    $ paysAtt = "Eternia"
     menu :
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 900
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
+
+label Eisenberg:
+    $ paysAtt = "Eisenberg"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 900
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
+
+
+label Caldisla:
+    $ paysAtt = "Caldisla"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 600
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
+
+label GrandNavire:
+    $ paysAtt = "GrandNavire"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 300
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
+
+label Florem:
+    $ paysAtt = "Florem"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 1200
+            jump Attaque
+        "Je ne veux pas attaquer [paysAtt!q]."
+            jump TerritoireAtta
+
+label Ancheim:
+    $ paysAtt = "Ancheim"
+    menu :
+        "Je veux attaquer [paysAtt!q] !":
+            $ puissanceDef = 15000
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q]."
             jump TerritoireAtta
