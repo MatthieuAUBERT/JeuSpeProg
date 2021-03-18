@@ -42,10 +42,10 @@ label TerritoireAtta :
 label Eternia:
     $ paysAtt = "Eternia"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" :
             $ puissanceDef = 900
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q]." :
             jump TerritoireAtta
 
 label Eisenberg:
@@ -54,7 +54,7 @@ label Eisenberg:
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 900
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q].":
             jump TerritoireAtta
 
 
@@ -64,7 +64,7 @@ label Caldisla:
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 600
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q].":
             jump TerritoireAtta
 
 label GrandNavire:
@@ -73,7 +73,7 @@ label GrandNavire:
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 300
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q].":
             jump TerritoireAtta
 
 label Florem:
@@ -82,7 +82,7 @@ label Florem:
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 1200
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q].":
             jump TerritoireAtta
 
 label Ancheim:
@@ -91,7 +91,7 @@ label Ancheim:
         "Je veux attaquer [paysAtt!q] !":
             $ puissanceDef = 15000
             jump Attaque
-        "Je ne veux pas attaquer [paysAtt!q]."
+        "Je ne veux pas attaquer [paysAtt!q].":
             jump TerritoireAtta
 
 #Fonction d'attaque (comparaison des deux forces et victoire du plus fort)

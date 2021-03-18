@@ -58,7 +58,7 @@ screen Attaque :
         idle "icons/attaque.png"
         action Jump("PréparationAttaque")
 
-#Affichage Temps Réel
+#Affichage Temps Réel *
 screen NombreSoldats:
     text "Soldats prêts au combat : [nbrSoldats!q] / Soldats maximum : [maxSoldats!q]":
         xalign 0
