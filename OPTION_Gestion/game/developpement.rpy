@@ -1,22 +1,55 @@
 
-label d :
-    screen village:
-        imagemap:
-            ground "village.png"
-            hotspot (103, 40, 173, 264) action Jump("Caserne")
-            hotspot (44, 516, 148, 191) action Jump("Habitation")
-            hotspot (856, 150, 114, 154) action Jump("Mine")
-            hotspot (958, 4, 55, 93) action Jump("BatimentAdmin")
-            hotspot (692, 337, 46, 31) action Jump("TerrainAgri")
-            hotspot (1123, 569, 144, 135) action Jump("Puits")
-            hotspot (1123, 569, 144, 135) action Jump("retour")
+label developpement :
+
+    call screen village
+
+
 
 label Caserne:
+    show screen caserne
+
     jump developpement
-label Habitation :
-label Mine :
-label BatimentAdmin :
-label TerrainAgri :
-label Puits :
+
+label Habitation:
+    call screen habitation
+
+    jump developpement
 
 
+label Mine:
+    call screen mine
+
+    jump developpement
+
+
+label BatimentAdmin:
+    call screen batimentadmin
+
+    jump developpement
+
+
+label TerrainAgri:
+    call screen terrainagri
+
+    jump developpement
+
+
+label Puits:
+    call screen puits
+
+    jump developpement
+
+
+   
+    #$ lvlcaserne = 1 
+   # $ upcaserne[6]={0,100,200,500,1500,2000}
+   # texte  Niv: 
+    #texte Info:    
+   # if (lvlcaserne<6):
+    #    texte Upgrade :
+    #    if (gold>upcaserne[lvlcaserne]):
+    #        bouton avec text + [upcaserne[lvlcaserne]]Gold 
+    #        $ gold -= upcaserne[lvlcaserne]
+    #        $ lvlcaserne +=1          
+   # jump developpement
+        
