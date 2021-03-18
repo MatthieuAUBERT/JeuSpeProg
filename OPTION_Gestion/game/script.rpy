@@ -1,3 +1,4 @@
+
 default nbrSoldats = 100
 default maxSoldats = 550
 default money = 1000
