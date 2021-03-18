@@ -1,8 +1,11 @@
 #Envoi de troupes :
 label PréparationAttaque:
+    hide screen Map
+    hide screen Relations
+    hide screen City
+    hide screen Money
+    hide screen Attaque
     "Vous allez attaquer ! Préparez vos troupes !"
-    $ nbrSoldats = 100
-    $ maxSoldats = 550
 
 #Fonction Regroupement : Création d'une armée d'attaque (via un bouton d'ajout et d'enlèvement de "soldats")
 label Regroupement:
@@ -37,6 +40,9 @@ label PrêtAttaque:
 
 #Fonction Choix du territoire à attaquer (via Carte)
 label TerritoireAtta :
+    hide screen PlusButton
+    hide screen MinusButton
+    hide screen validation
     call screen CarteMondeAtt
 
 label Eternia:
@@ -100,10 +106,12 @@ label Attaque:
         "Votre armée a échoué !"
         "Vous revenez les mains vides, cette défaite vous coûte chère."
         $ maxSoldats -= nbrSoldats
+        jump end
 
     else :
         "Votre armée a réussi !"
         "Vous revenez plein d'or et souverain d'un nouveau territoire !"
         $ maxSoldats -= (nbrSoldats/4)
+        jump end
 
 #Si présence d'un allié, attaque commune "FACUL."
