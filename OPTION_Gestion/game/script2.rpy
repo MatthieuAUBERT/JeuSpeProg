@@ -1,4 +1,4 @@
-﻿default gold = 10000
+﻿default gold = 1000
 
 
 
