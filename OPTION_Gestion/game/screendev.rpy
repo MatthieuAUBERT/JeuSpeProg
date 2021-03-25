@@ -2,14 +2,50 @@ screen village:
     frame:
         imagemap:
             ground "village.png"
-            at custom_zoom3
-            hotspot (133, 137, 69, 81) action Jump("Caserne")
-            hotspot (321, 80, 88, 88) action Jump("Habitation")
-            hotspot (323, 287, 77, 65) action Jump("Mine")
-            hotspot (958, 4, 55, 93) action Jump("BatimentAdmin")
-            hotspot (692, 337, 46, 31) action Jump("TerrainAgri")
-            hotspot (1123, 569, 144, 135) action Jump("Puit")
-            hotspot (1123, 569, 144, 135) action Jump("fin_developpement")
+            hotspot (861, 292, 399, 319) action Jump("Caserne")
+            hotspot (396, 344, 424, 262) action Jump("Habitation")
+            hotspot (212, 55, 231, 197) action Jump("Mine")
+            hotspot (30, 280, 268, 266) action Jump("BatimentAdmin")
+            hotspot (413, 209, 378, 134) action Jump("TerrainAgri")
+            hotspot (784, 47, 190, 212)action Jump("Puit")
+            
+screen caserne:
+    imagemap:
+        ground "caserne.png"
+        xpos 400
+        ypos 100
+        at custom_zoom3
+screen habitation:
+    imagemap:
+        ground "habitation.png"
+        xpos 400
+        ypos 200
+        at custom_zoom3
+screen mine:
+    imagemap:
+        ground "Mine.png"
+        xpos 400
+        ypos 200
+        at custom_zoom3
+screen batimentadmin:
+    imagemap:
+        ground "batimentadmin.png"
+        xpos 400
+        ypos 50
+        at custom_zoom3
+screen terrainagri:
+    imagemap:
+        ground "terrainagri.png"
+        xpos 400
+        ypos 200
+        at custom_zoom3
+screen puit:
+    imagemap:
+        ground "Puit.png"
+        xpos 400
+        ypos 200
+        at custom_zoom3
+
 
 transform custom_zoom3:
-    zoom 1.5
+    zoom 1

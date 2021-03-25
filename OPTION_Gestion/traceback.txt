@@ -1,32 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/developpement.rpy", line 11, in script
-    Caserne "Niveau : [lvlcarserne] {p=0.1}Info : La caserne permet d'augmenter le nombre de troupe crée en debut de chaque journée !"
-KeyError: u'lvlcarserne'
+  File "game/developpement.rpy", line 61, in script
+    menu :
+  File "game/developpement.rpy", line 69, in <module>
+    "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixhabitation:
+NameError: name 'prixhabitation' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/developpement.rpy", line 11, in script
-    Caserne "Niveau : [lvlcarserne] {p=0.1}Info : La caserne permet d'augmenter le nombre de troupe crée en debut de chaque journée !"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1384, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1164, in __call__
-    what = what_pattern.replace("[what]", sub(what, translate=True))
-  File "renpy/character.py", line 1153, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "renpy/substitutions.py", line 270, in substitute
-    s = formatter.vformat(s, (), kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 563, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 585, in _vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 646, in get_field
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python2.7/string.py", line 605, in get_value
-KeyError: u'lvlcarserne'
+  File "game/developpement.rpy", line 61, in script
+    menu :
+  File "renpy/ast.py", line 1642, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "renpy/exports.py", line 995, in menu
+    condition = renpy.python.py_eval(condition)
+  File "renpy/python.py", line 2249, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "renpy/python.py", line 2242, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/developpement.rpy", line 69, in <module>
+    "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixhabitation:
+NameError: name 'prixhabitation' is not defined
 
 Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
 OPTION_Gestion 1.0
-Thu Mar 18 09:35:30 2021
+Thu Mar 18 10:44:49 2021

@@ -1,4 +1,4 @@
-Thu Mar 18 10:34:37 2021
+Thu Mar 18 10:46:03 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
  
@@ -461,4 +461,7 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1252, 704) drawable=(1252, 704)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.739166021347s
+Total time until interface ready: 0.737977981567s
+Screen sizes: virtual=(1280, 720) physical=(2560, 1017) drawable=(2560, 1017)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048

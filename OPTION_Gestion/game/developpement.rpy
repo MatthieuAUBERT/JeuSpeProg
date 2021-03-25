@@ -7,13 +7,13 @@ label developpement :
 
 label Caserne:
 
-    show caserne
+    show screen caserne
     
     Caserne "Niveau : [lvlcaserne] {p=0.1}Info : La caserne permet d'augmenter le nombre de troupe crée en debut de chaque journée !"
 
     menu:
         "Retour au village ":
-            hide caserne
+            hide screen caserne
             jump developpement
         
         "Upgrade" if lvlcaserne<6 :
@@ -27,7 +27,7 @@ label labupcaserne:
         "Ameliorer la caserne pour [prixupcaserne] Gold " if gold>prixupcaserne:
             $ gold -= prixupcaserne
             $ lvlcaserne += 1
-            hide caserne
+            hide screen caserne
             jump developpement
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixupcaserne:
@@ -42,13 +42,13 @@ label labupcaserne:
 
 label Habitation:
 
-    show habitation
+    show screen habitation
     
     Habitation "Niveau : [lvlhabitation] {p=0.1}Info : Une habitation permet d'augmenter le nombre de troupe maximal que l'on peut stocker !"
 
     menu:
         "Retour au village ":
-            hide habitation
+            hide screen habitation
             jump developpement
         
         "Upgrade" if lvlhabitation<6 :
@@ -60,13 +60,14 @@ label labuphabitation:
     
     menu :
         Habitation "Amelioration de l'habitation !"
-        "Ameliorer l'habitation' pour [prixuphabitation] Gold " if gold>prixuphabitation:
+        "Ameliorer l'habitation pour [prixuphabitation] Gold " if gold>prixuphabitation:
             $ gold -= prixuphabitation
             $ lvlhabitation += 1
-            hide habitation
+            hide screen habitation
             jump developpement
 
-        "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixhabitation:
+
+        "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixuphabitation:
             jump Habitation
 
         "Ne pas ameliorer l'habitation ":
@@ -77,13 +78,13 @@ label labuphabitation:
 
 label Mine:
 
-    show mine
+    show screen mine
     
     Mine "Niveau : [lvlmine] {p=0.1}Info : La mine permet d'augmenter le nombre de d'or reçu en debut de chaque journée !"
 
     menu:
         "Retour au village ":
-            hide mine
+            hide screen mine
             jump developpement
         
         "Upgrade" if lvlmine<6 :
@@ -98,7 +99,7 @@ label labupmine:
         "Ameliorer la mine pour [prixuphabitation] Gold " if gold>prixupmine:
             $ gold -= prixupmine
             $ lvlmine += 1
-            hide mine
+            hide screen mine
             jump developpement
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixmine:
@@ -111,13 +112,13 @@ label labupmine:
 
 label BatimentAdmin:
 
-    show batimentadmin
+    show screen batimentadmin
     
     BatimentAdmin "Niveau : [lvlbatimentadmin] {p=0.1}Info : Le batiment administratif permet d'augmenter les relation avec les ambasadeurs d'autre village !"
 
     menu:
         "Retour au village ":
-            hide batimentadmin
+            hide screen batimentadmin
             jump developpement
         
         "Upgrade" if lvlbatimentadmin<6 :
@@ -132,7 +133,7 @@ label labupbatimentadmin:
         "Ameliorer le batiment administratif pour [prixupbatimentadmin] Gold " if gold>prixupbatimentadmin:
             $ gold -= prixupbatimentadmin
             $ lvlbatimentadmin += 1
-            hide batimentadmin
+            hide screen batimentadmin
             jump developpement
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixbatimentadmin:
@@ -149,13 +150,13 @@ label labupbatimentadmin:
 
 label TerrainAgri:
 
-    show terrainagri
+    show screen terrainagri
     
     TerrainAgri "Niveau : [lvlterrainagri] {p=0.1}Info : Le terrain agricole permet d'augmenter les productions de nourritures reçu en debut de chaque journée !"
 
     menu:
         "Retour au village ":
-            hide terrainagri
+            hide screen terrainagri
             jump developpement
         
         "Upgrade" if lvlterrainagri<6 :
@@ -170,7 +171,7 @@ label labupterrainagri:
         "Ameliorer le terrain agricole pour [prixupterrainagri] Gold " if gold>prixupterrainagri:
             $ gold -= prixupterrainagri
             $ lvlbatimentadmin += 1
-            hide batimentadmin
+            hide screen batimentadmin
             jump developpement
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixupterrainagri:
@@ -182,13 +183,13 @@ label labupterrainagri:
 
 
 label Puit:
-    show puit
+    show screen puit 
     
     Puit "Niveau : [lvlpuit] {p=0.1}Info : Le puit permet d'augmenter les productions d'eaux reçu en debut de chaque journée"
 
     menu:
         "Retour au village ":
-            hide puit
+            hide screen puit
             jump developpement
         
         "Upgrade" if lvlpuit<6 :
@@ -203,7 +204,7 @@ label labuppuit:
         "Ameliorer le puit pour [prixuppuit] Gold " if gold>prixuppuit:
             $ gold -= prixuppuit
             $ lvlpuit += 1
-            hide puit
+            hide screen puit
             jump puit
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixuppuit:
