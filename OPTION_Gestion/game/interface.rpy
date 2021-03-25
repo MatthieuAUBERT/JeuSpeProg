@@ -46,7 +46,7 @@ screen PlusButton :
     imagebutton:
         xanchor 0.5
         yanchor 0.5
-        xpos 0.8
+        xpos 0.90
         ypos 0.4
         idle "icons/plusbutton.png"
         at custom_zoom1
@@ -57,7 +57,7 @@ screen MinusButton :
     imagebutton:
         xanchor 0.5
         yanchor 0.5
-        xpos 0.8
+        xpos 0.90
         ypos 0.6
         at custom_zoom1
         idle "icons/minusbutton.png"
