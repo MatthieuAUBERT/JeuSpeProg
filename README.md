@@ -1,11 +1,12 @@
 # JeuSpeProg
 
-screen chambreMG:
-    imagemap:
-        ground "chambre rangee.png"
-        hotspot (103, 40, 173, 264) action Jump("poster")
-        hotspot (44, 516, 148, 191) action Jump("ballon")
-        hotspot (856, 150, 114, 154) action Jump("poster_basket")
-        hotspot (958, 4, 55, 93) action Jump("livre")
-        hotspot (692, 337, 46, 31) action Jump("photo")
-        hotspot (1123, 569, 144, 135) action Jump("retour")
+Jeu de la spécialité programmation :
+Sujet : Créer des fonctionnalités typiques d'un jeu de gestion/stratégie à partir d'un logiciel de Visual Novel (Ren'Py)
+
+@Disclaimer : 
+-Les images du jeu ne sont pas des créations originales mais n'ont aucun but commercial. Au contraire, elles ont permis un rendu plus rapide du script et de ce fait elles peuvent facilement et rapidement être changé en assets originaux (à condition qu'ils respectent les tailles et formats).
+
+@Crédits :
+
+Programmé par Matthieu, Corentin et Guillaume, groupe numéro 3 de la spécialité Programmation de l'école ETPA Rennes.
+Logiciel utilisé Ren'Py, langage : Python
