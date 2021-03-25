@@ -60,7 +60,7 @@ default nombre_territoires = 1
 default liste_noms_ressources = ["kg d'or","soldats","litres d'eau potable","tonnes de nourriture"]
 default liste_noms_ressources_bis = ["d'or"," de soldats","d'eau potable","de nourriture"]
 default liste_valeurs_ressources = [gold,nbrSoldats,water,food]
-default liste_chefs = ["Le duché d'Éternia","Eisenberg","Grandnavire","Ancheim","Florem","Caldisla"]
+default liste_chefs = ["du duché d'Éternia","d'Eisenberg","de Grandnavire","d'Ancheim","de Florem","de Caldisla"]
 default liste_requetes = []
 
 default flag = True
