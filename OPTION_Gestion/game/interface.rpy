@@ -33,10 +33,10 @@ screen City :
         ypos 0
         idle "icons/city.png"
         at custom_zoom1
-        action Jump("city")
+        action Jump("developpement")
 
 screen Money :
-    text "Argent : [money!q]":
+    text "Argent : [gold!q]":
         xpos 0.01
         ypos 0.01
         size 20
@@ -46,7 +46,7 @@ screen PlusButton :
     imagebutton:
         xanchor 0.5
         yanchor 0.5
-        xpos 0.8
+        xpos 0.90
         ypos 0.4
         idle "icons/plusbutton.png"
         at custom_zoom1
@@ -57,7 +57,7 @@ screen MinusButton :
     imagebutton:
         xanchor 0.5
         yanchor 0.5
-        xpos 0.8
+        xpos 0.90
         ypos 0.6
         at custom_zoom1
         idle "icons/minusbutton.png"
@@ -72,7 +72,7 @@ screen validation :
         ypos 0.9
         idle "icons/validate.png"
         at custom_zoom2
-        action Jump("PrêtAttaque")
+        action Jump("PretAttaque")
 
 #Attaque sur un autre territoire *
 screen Attaque :
@@ -81,7 +81,7 @@ screen Attaque :
         ypos 0.8
         idle "icons/attaque.png"
         at custom_zoom1
-        action Jump("PréparationAttaque")
+        action Jump("PreparationAttaque")
 
 #Affichage Temps Réel *
 screen NombreSoldats:

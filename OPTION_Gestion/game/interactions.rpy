@@ -7,11 +7,6 @@ screen rel:
 label relations :
     call screen rel
 
-screen ville:
-    imagebutton:
-        xpos 0
-        idle "ville.png"
-        action Jump("Interface")
 
 label city:
     call screen ville
