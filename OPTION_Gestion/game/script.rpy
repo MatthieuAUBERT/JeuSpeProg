@@ -1,15 +1,4 @@
 
-default nombre_alliers_max = 5
-default nombre_alliers = 0
-default nombre_territoires_max = 15
-default nombre_territoires = 1
-
-default liste_noms_ressources = ["kg d'or","soldats","litres d'eau potable","tonnes de nourriture"]
-default liste_noms_ressources_bis = ["d'or"," de soldats","d'eau potable","de nourriture"]
-default liste_valeurs_ressources = [gold,nbrSoldats,water,food]
-default liste_chefs = ["Le duché d'Éternia","Eisenberg","Grandnavire","Ancheim","Florem","Caldisla"]
-default liste_requetes = []
-
 #Variables de début de jeu
 default gold = 1000
 default jour = 0
@@ -41,6 +30,7 @@ default lvlpuit = 1
 default uppuit=[0,100,200,500,1500,2000]
 default prixuppuit = 0
 
+
 #Variables Guerre
 default nbrSoldats = 100
 default maxSoldats = 550
@@ -61,9 +51,35 @@ define BatimentAdmin = Character("BatimentAdmin")
 define TerrainAgri = Character("TerrainAgri")
 define Puit = Character("Puit")
 
+#Diplomatie
+default nombre_alliers_max = 5
+default nombre_alliers = 0
+default nombre_territoires_max = 15
+default nombre_territoires = 1
 
+default liste_noms_ressources = ["kg d'or","soldats","litres d'eau potable","tonnes de nourriture"]
+default liste_noms_ressources_bis = ["d'or"," de soldats","d'eau potable","de nourriture"]
+default liste_valeurs_ressources = [gold,nbrSoldats,water,food]
+default liste_chefs = ["Le duché d'Éternia","Eisenberg","Grandnavire","Ancheim","Florem","Caldisla"]
+default liste_requetes = []
+
+default flag = True
 
 label start:
+
+    $ liste_requetes.append("Je vous propose cet échange :")
+    $ liste_requetes.append("J'aurai besoin de certaines ressources :")
+    $ liste_requetes.append("Bonjour, que diriez-vous de commercer ?")
+    $ liste_requetes.append("Suite à des problèmes de logistique, j'aurai besoin de ceci :")
+    $ liste_requetes.append("Seriez-vous disposé à échanger ces ressources ?")
+    $ liste_requetes.append("C'est l'heure du troc !")
+
+    default mat_diplomatie = [ [0]*(nombre_alliers_max+1) for i in range(nombre_alliers_max+1)]
+
+    python :
+        for i in range(nombre_alliers_max+1):
+            mat_diplomatie[i][i] = 1
+
 
     scene bg with fade
 
@@ -81,6 +97,7 @@ label Interface :
 
 label Interface2 :
     "Jour [jour!q]"
+    $ flag = True
     $ nbrSoldats += 100 * lvlcaserne
     $ maxSoldats = 550 + (lvlhabitation * 100)
     $ gold += lvlmine * 100
