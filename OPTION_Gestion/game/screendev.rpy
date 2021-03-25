@@ -15,7 +15,7 @@ screen returnbutton :
         yanchor 0.5
         xpos 0.92
         ypos 0.1
-        idle "returnbutton.png"
+        idle "icons/returnbutton.png"
         at custom_zoom1
         action Jump("Interface")
 

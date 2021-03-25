@@ -193,7 +193,7 @@ label Puit:
     hide screen village
     show screen puit
 
-    Puit "Niveau : [lvlpuit] {p=0.1}Info : Le puits permet d'augmenter les productions d'eau reçus en début de chaque journée"
+    Puit "Niveau : [lvlpuit] {p=0.1}Info : Le puits permet d'augmenter les productions d'eau reçus en début de chaque journée !"
 
     menu:
         "Retour au village ":
