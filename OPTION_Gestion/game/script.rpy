@@ -48,7 +48,7 @@ define Caserne = Character("Caserne")
 define Habitation = Character("Habitation")
 define Mine = Character("Mine")
 define BatimentAdmin = Character("BatimentAdmin")
-define TerrainAgri = Character("TerrainAgri")
+define TerrainAgri = Character("Terrain Agricole")
 define Puit = Character("Puits")
 
 #Diplomatie

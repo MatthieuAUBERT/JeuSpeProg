@@ -103,7 +103,7 @@ label labupmine:
 
     menu :
         Mine "Amélioration de la mine !"
-        "Améliorer la mine pour [prixuphabitation] Gold " if gold>prixupmine:
+        "Améliorer la mine pour [prixupmine] Gold " if gold>prixupmine:
             $ gold -= prixupmine
             $ lvlmine += 1
             hide screen mine
@@ -151,10 +151,6 @@ label labupbatimentadmin:
 
 
 
-
-
-
-
 label TerrainAgri:
     hide screen village
     show screen terrainagri
@@ -177,8 +173,8 @@ label labupterrainagri:
         TerrainAgri "Amelioration du terrain agricole !"
         "Ameliorer le terrain agricole pour [prixupterrainagri] Gold " if gold>prixupterrainagri:
             $ gold -= prixupterrainagri
-            $ lvlbatimentadmin += 1
-            hide screen batimentadmin
+            $ lvlterrainagri += 1
+            hide screen terrainagri
             jump developpement
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixupterrainagri:

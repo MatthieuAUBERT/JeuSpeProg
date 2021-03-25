@@ -1,4 +1,4 @@
-Thu Mar 25 10:54:14 2021
+Thu Mar 25 11:04:41 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.2.1292
  
@@ -6,16 +6,17 @@ Ren'Py 7.4.2.1292
 Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.15s
+Loading error handling took 0.01s
+Loading script took 0.13s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.04s
+Backing up script files to 'C:\\Users\\game\\AppData\\Roaming/RenPy/backups\\OPTION_Gestion':
+Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -24,15 +25,15 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.05s
 Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.07s
+Interface start took 0.06s
 
 Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1080)
@@ -460,4 +461,7 @@ Texture testing:
 Screen sizes: virtual=(1280, 720) physical=(1739, 978) drawable=(1739, 978)
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 0.726755857468s
+Total time until interface ready: 0.759363889694s
+Screen sizes: virtual=(1280, 720) physical=(2560, 1017) drawable=(2560, 1017)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
