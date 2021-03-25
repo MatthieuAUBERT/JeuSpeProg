@@ -1,3 +1,15 @@
+
+default nombre_alliers_max = 5
+default nombre_alliers = 0
+default nombre_territoires_max = 15
+default nombre_territoires = 1
+
+default liste_noms_ressources = ["kg d'or","soldats","litres d'eau potable","tonnes de nourriture"]
+default liste_noms_ressources_bis = ["d'or"," de soldats","d'eau potable","de nourriture"]
+default liste_valeurs_ressources = [gold,nbrSoldats,water,food]
+default liste_chefs = ["Le duché d'Éternia","Eisenberg","Grandnavire","Ancheim","Florem","Caldisla"]
+default liste_requetes = []
+
 #Variables de début de jeu
 default gold = 1000
 default jour = 0
@@ -59,6 +71,7 @@ label start:
     "Votre but : Conquérir tous les territoires !"
     jump Interface
 
+
 label Interface :
     show screen Map
     show screen Relations
@@ -78,6 +91,7 @@ label Interface2 :
     show screen City
     show screen Money
     call screen Attaque
+
 
 label endA:
     "Félicitations ! Vous avez fini le jeu !"
