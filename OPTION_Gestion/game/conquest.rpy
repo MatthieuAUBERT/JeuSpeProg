@@ -1,5 +1,5 @@
 #Envoi de troupes :
-label PréparationAttaque:
+label PreparationAttaque:
     hide screen Map
     hide screen Relations
     hide screen City
@@ -34,7 +34,7 @@ label DeleteSoldat:
     jump Regroupement
 
 
-label PrêtAttaque:
+label PretAttaque:
     $ puissance = nbrSoldats * 10
     jump TerritoireAtta
 
@@ -48,7 +48,7 @@ label TerritoireAtta :
 label Eternia:
     $ paysAtt = "Eternia"
     menu :
-        "Je veux attaquer [paysAtt!q] !" :
+        "Je veux attaquer [paysAtt!q] !" if EterniaConquis == False :
             $ puissanceDef = 900
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q]." :
@@ -57,7 +57,7 @@ label Eternia:
 label Eisenberg:
     $ paysAtt = "Eisenberg"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" if EisenbergConquis == False:
             $ puissanceDef = 900
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q].":
@@ -67,7 +67,7 @@ label Eisenberg:
 label Caldisla:
     $ paysAtt = "Caldisla"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" if CaldislaConquis == False:
             $ puissanceDef = 600
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q].":
@@ -76,7 +76,7 @@ label Caldisla:
 label GrandNavire:
     $ paysAtt = "GrandNavire"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" if GrandNavireConquis == False:
             $ puissanceDef = 300
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q].":
@@ -85,7 +85,7 @@ label GrandNavire:
 label Florem:
     $ paysAtt = "Florem"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" if FloremConquis == False:
             $ puissanceDef = 1200
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q].":
@@ -94,7 +94,7 @@ label Florem:
 label Ancheim:
     $ paysAtt = "Ancheim"
     menu :
-        "Je veux attaquer [paysAtt!q] !":
+        "Je veux attaquer [paysAtt!q] !" if AncheimConquis == False:
             $ puissanceDef = 15000
             jump Attaque
         "Je ne veux pas attaquer [paysAtt!q].":
@@ -104,14 +104,37 @@ label Ancheim:
 label Attaque:
     if puissance < puissanceDef :
         "Votre armée a échoué !"
-        "Vous revenez les mains vides, cette défaite vous coûte chère."
+        "Vous revenez les mains vides, cette défaite vous coûte cher."
         $ maxSoldats -= nbrSoldats
-        jump end
+        $ gold -= 400
+        if (gold <= 0):
+            jump endB
+
+        elif territoireConquis == 6:
+            jump endA
+        else :
+            $ jour += 1
+            jump Interface2
 
     else :
         "Votre armée a réussi !"
         "Vous revenez plein d'or et souverain d'un nouveau territoire !"
         $ maxSoldats -= (nbrSoldats/4)
-        jump end
+        $ jour += 1
+        $ gold += 500
+        $ territoireConquis += 1
+        if paysAtt == "Eternia":
+            $ EterniaConquis = True
+        if paysAtt == "Eisenberg":
+            $ EisenbergConquis = True
+        if paysAtt == "Caldisla":
+            $ CaldislaConquis = True
+        if paysAtt == "GrandNavire":
+            $ GrandNavireConquis = True
+        if paysAtt == "Florem":
+            $ FloremConquis = True
+        if paysAtt == "Ancheim":
+            $ AncheimConquis = True
+        jump Interface2
 
 #Si présence d'un allié, attaque commune "FACUL."
