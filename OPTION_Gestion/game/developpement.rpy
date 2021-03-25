@@ -4,13 +4,16 @@ label developpement :
     hide screen City
     hide screen Money
     hide screen Attaque
-    call screen village
+    show screen village
+    call screen returnbutton
+
+
 
 
 
 
 label Caserne:
-
+    hide screen village
     show screen caserne
 
     Caserne "Niveau : [lvlcaserne] {p=0.1}Info : La caserne permet d'augmenter le nombre de troupes créées en début de chaque journée !"
@@ -45,7 +48,7 @@ label labupcaserne:
 
 
 label Habitation:
-
+    hide screen village
     show screen habitation
 
     Habitation "Niveau : [lvlhabitation] {p=0.1}Info : Une habitation permet d'augmenter le nombre maximal de troupes que l'on peut stocker !"
@@ -81,7 +84,7 @@ label labuphabitation:
 
 
 label Mine:
-
+    hide screen village
     show screen mine
 
     Mine "Niveau : [lvlmine] {p=0.1}Info : La mine permet d'augmenter le nombre de d'or reçu en début de chaque journée !"
@@ -115,7 +118,7 @@ label labupmine:
 
 
 label BatimentAdmin:
-
+    hide screen village
     show screen batimentadmin
 
     BatimentAdmin "Niveau : [lvlbatimentadmin] {p=0.1}Info : Le batiment administratif permet d'augmenter les relations avec les ambassadeurs d'autres villages !"
@@ -153,7 +156,7 @@ label labupbatimentadmin:
 
 
 label TerrainAgri:
-
+    hide screen village
     show screen terrainagri
 
     TerrainAgri "Niveau : [lvlterrainagri] {p=0.1}Info : Le terrain agricole permet d'augmenter les productions de nourritures reçus en début de chaque journée !"
@@ -187,6 +190,7 @@ label labupterrainagri:
 
 
 label Puit:
+    hide screen village
     show screen puit
 
     Puit "Niveau : [lvlpuit] {p=0.1}Info : Le puits permet d'augmenter les productions d'eau reçus en début de chaque journée"

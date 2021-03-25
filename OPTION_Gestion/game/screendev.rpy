@@ -9,6 +9,18 @@ screen village:
             hotspot (413, 209, 378, 134) action Jump("TerrainAgri")
             hotspot (784, 47, 190, 212)action Jump("Puit")
 
+screen returnbutton :
+    imagebutton:
+        xanchor 0.5
+        yanchor 0.5
+        xpos 0.92
+        ypos 0.1
+        idle "returnbutton.png"
+        at custom_zoom1
+        action Jump("Interface")
+
+
+
 screen caserne:
     imagemap:
         ground "caserne.png"
