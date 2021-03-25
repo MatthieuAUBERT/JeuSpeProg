@@ -11,7 +11,7 @@ default food = 10
 default liste_noms_ressources = ["kg d'or","soldats","litres d'eau potable","tonnes de nourriture"]
 default liste_noms_ressources_bis = ["d'or"," de soldats","d'eau potable","de nourriture"]
 default liste_valeurs_ressources = [gold,nbrSoldats,water,food]
-default liste_chefs = ["Alfred","Bertrand","Cunégonde","Delphine","Eric"]
+default liste_chefs = ["Le duché d'Éternia","Eisenberg","Grandnavire","Ancheim","Florem","Caldisla"]
 default liste_requetes = []
 
 label start :
