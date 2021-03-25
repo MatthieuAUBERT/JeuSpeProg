@@ -3,6 +3,14 @@
     if flag == False:
 
         "Vous avez déjà réalisé l'interaction diplomatique du jour"
+
+    hide screen Map
+    hide screen City
+    hide screen Relations
+
+
+    if flag == False:
+        "Vous avez déjà réalisé l'interaction diplomatique du jour !"
         jump Interface
 
     if flag == True :

@@ -48,8 +48,8 @@ define Caserne = Character("Caserne")
 define Habitation = Character("Habitation")
 define Mine = Character("Mine")
 define BatimentAdmin = Character("BatimentAdmin")
-define TerrainAgri = Character("TerrainAgri")
-define Puit = Character("Puit")
+define TerrainAgri = Character("Terrain Agricole")
+define Puit = Character("Puits")
 
 #Diplomatie
 default nombre_alliers_max = 5
@@ -89,6 +89,8 @@ label start:
 
 
 label Interface :
+    hide screen village
+    hide screen returnbutton
     show screen Map
     show screen Relations
     show screen City
