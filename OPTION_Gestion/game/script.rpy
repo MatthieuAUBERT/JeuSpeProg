@@ -101,7 +101,7 @@ label Interface2 :
     "Jour [jour!q]"
     $ flag = True
     $ nbrSoldats += 100 * lvlcaserne
-    $ maxSoldats = 550 + (lvlhabitation * 100)
+    $ maxSoldats += (lvlhabitation * 100)
     $ gold += lvlmine * 100
     $ food += lvlterrainagri * 10
     $ water += lvlpuit * 10

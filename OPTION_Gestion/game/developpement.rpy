@@ -209,10 +209,10 @@ label labuppuit:
             $ gold -= prixuppuit
             $ lvlpuit += 1
             hide screen puit
-            jump puit
+            jump Puit
 
         "Vous n'avez pas encore assez de gold pour l'amélioration" if gold<prixuppuit:
             jump Puit
 
-        "Ne pas améliorer le puit":
+        "Ne pas améliorer le puits":
             jump Puit
